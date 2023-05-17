@@ -18,8 +18,8 @@ function Home() {
                         <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>Login</Button>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS13-1.jpg" alt="" width="500px" height="500px" />
+               <Grid item xs={6} >
+                 <img src="https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS13-1.jpg" alt="" width="500px" height="500px" />
                 </Grid>
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>

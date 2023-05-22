@@ -3,6 +3,6 @@
     color: white;
 }
 .text-decorator-none{
-    text-decoration: none;
-    color: white;
+    text-decoration: none !important;
+    color: white !important;
 }

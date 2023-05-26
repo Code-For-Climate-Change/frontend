@@ -4,41 +4,50 @@ import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
-
-
-
 function Navbar() {
     return (
         <>
-            <AppBar position="static" style={{background: "#05668D"}}>
+            <AppBar position="static" style={{ background: "#05668D" }}>
                 <Toolbar variant="dense">
                     <Box style={{ cursor: "pointer" }} >
                         <Typography variant="h5" color="inherit">
-                            Code for Climate Change
+                            Code4CC 🌐
                         </Typography>
                     </Box>
 
                     <Box display="flex" justifyContent="start">
-                    <Link to='/home' className='text-decorator-none'>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" style={{ color: "white" }}>
-                                 Home
-                            </Typography>
-                        </Box>
+                        <Link to='/home' className='text-decorator-none'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" style={{ color: "white" }}>
+                                    Home
+                                </Typography>
+                            </Box>
                         </Link>
                         <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" style={{color: "inherit"}}>
+                            <Typography variant="h6" style={{ color: "inherit" }}>
                                 Perfil
                             </Typography>
                         </Box>
+
+                        <Link className="text-decorator-none" to="/feed">
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Feed
+                                </Typography>
+                            </Box>
+                        </Link>
+
+                        <Link className="text-decorator-none" to="/temas">
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Tema
+                                </Typography>
+                            </Box>
+                        </Link>
+
                         <Box mx={1} style={{ cursor: "pointer" }}>
                             <Typography variant="h6" color="inherit">
-                                Feed
-                            </Typography>
-                        </Box>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" color="inherit">
-                               Sobre
+                                Sobre
                             </Typography>
                         </Box>
                         <Box mx={1} style={{ cursor: "pointer" }}>
@@ -46,12 +55,13 @@ function Navbar() {
                                 Contatos
                             </Typography>
                         </Box>
+
                         <Link to='/login' className='text-decorator-none'>
-                        <Box mx={1} style={{ cursor: "pointer" }}>
-                            <Typography variant="h6" style={{color:"white"}}>
-                                Logout
-                            </Typography>
-                        </Box>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" style={{ color: "white" }}>
+                                    Logout
+                                </Typography>
+                            </Box>
                         </Link>
                     </Box>
 

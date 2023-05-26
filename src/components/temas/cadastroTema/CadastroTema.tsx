@@ -5,22 +5,24 @@ import './CadastroTema.css';
 import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
-import { useSelector } from 'react-redux';
-import { UserState } from '../../../store/token/Reducer';
+// import { useSelector } from 'react-redux';
+// import { UserState } from '../../../store/token/Reducer';
 import { toast } from 'react-toastify';
 
 
 function CadastroTema() {
     let navigate = useNavigate();
+    const [token, setToken] = useLocalStorage('token');
     const { id } = useParams<{ id: string }>();
 
-    const token = useSelector<UserState, UserState["tokens"]>(
-        (state) => state.tokens
-    )
+    // const token = useSelector<UserState, UserState["tokens"]>(
+    //     (state) => state.tokens
+    // ) -> Redux
 
     const [tema, setTema] = useState<Tema>({
         id: 0,
-        descricao: ''
+        descricao: '',
+        tema: ''
     })
 
     useEffect(() => {
@@ -116,6 +118,7 @@ function CadastroTema() {
         <Container maxWidth="sm" className="topo">
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center">Formulário de cadastro tema</Typography>
+                <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="tema" label="titulo" variant="outlined" name="tema" margin="normal" fullWidth />
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar

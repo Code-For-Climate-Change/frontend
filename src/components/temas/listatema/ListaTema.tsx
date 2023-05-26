@@ -8,22 +8,23 @@ import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../services/Service';
 import { Box } from '@mui/material';
 import { useSelector } from 'react-redux';
-import { UserState } from '../../../store/token/Reducer';
+// import { UserState } from '../../../store/token/Reducer';
 import { toast } from 'react-toastify';
 
 
 function ListaTema() {
     const [temas, setTemas] = useState<Tema[]>([])
+    const [token, setToken] = useLocalStorage('token');
 
-    const token = useSelector<UserState, UserState["tokens"]>(
-        (state) => state.tokens
-    )
-        
+    // const token = useSelector<UserState, UserState["tokens"]>(
+    //     (state) => state.tokens
+    // ) -> Redux
+
     let navigate = useNavigate();
 
     useEffect(() => {
         if (token == '') {
-            toast.error('Você precisa estar logado!' ,{
+            toast.error('Você precisa estar logado!', {
                 position: "top-right",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -51,17 +52,24 @@ function ListaTema() {
 
     return (
         <>
+            <Link to="/formularioTema">
+                <Box mx={1} m={2}>
+                    <Button variant="contained" size='small' color="primary">
+                        Cadastre aqui um novo tema
+                    </Button>
+                </Box>
+            </Link>
+
             {
                 temas.map(tema => (
                     <Box m={2} >
                         <Card variant="outlined">
                             <CardContent>
                                 <Typography color="textSecondary" gutterBottom>
-                                    Tema
+                                    {tema.tema}
                                 </Typography>
                                 <Typography variant="h5" component="h2">
                                     {tema.descricao}
-
                                 </Typography>
                             </CardContent>
                             <CardActions>

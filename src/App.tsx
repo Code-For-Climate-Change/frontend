@@ -11,6 +11,7 @@ import ListaPostagem from './components/postagens/listaPostagem/ListaPostagem';
 import CadastroPost from './components/postagens/cadastroPost/CadastroPost';
 import CadastroTema from './components/temas/cadastroTema/CadastroTema';
 
+
 function App() {
   return (
     <>
@@ -32,5 +33,6 @@ function App() {
     </>
   );
 }
+
 
 export default App;

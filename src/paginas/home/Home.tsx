@@ -40,17 +40,16 @@ function Home() {
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>Vamos cuidar do planeta!</Typography>
                     </Box>
-
-                    <Link to="/feed" className='text-decorator-none'>
                         <Box display="flex" justifyContent="center">
                             <Box marginRight={1}>
                                 <ModalPostagem />
                             </Box>
+                            <Link to="/feed" className='text-decorator-none'>
                             <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>
                                 Ver Postagens
                             </Button>
+                            </Link>
                         </Box>
-                    </Link>
                 </Grid>
                 <Grid item xs={6} >
                     <img src="https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS13-1.jpg" alt="" width="500px" height="500px" />

@@ -8,17 +8,17 @@ import Postagem from '../../../models/Postagem';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-// import { UserState } from '../../../store/token/Reducer';
+import { UserState } from '../../../store/token/Reducer';
 
 function CadastroPost() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
-    const [token, setToken] = useLocalStorage('token')
+    // const [token, setToken] = useLocalStorage('token')
     const [temas, setTemas] = useState<Tema[]>([])
 
-    // const token = useSelector<UserState, UserState["tokens"]>(
-    //     (state) => state.tokens
-    // ) -> REDUX
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+    )
 
     useEffect(() => {
         if (token == "") {

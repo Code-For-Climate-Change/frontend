@@ -8,16 +8,16 @@ import './ListaPostagem.css';
 import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
-// import { UserState } from '../../../store/token/Reducer';
+import { UserState } from '../../../store/token/Reducer';
 import { toast } from 'react-toastify';
 
 function ListaPostagem() {
   const [posts, setPosts] = useState<Postagem[]>([])
-  const [token, setToken] = useLocalStorage('token');
+  // const [token, setToken] = useLocalStorage('token');
   
-  // const token = useSelector<UserState, UserState["tokens"]>(
-  //   (state) => state.tokens
-  // ) -> REDUX
+  const token = useSelector<UserState, UserState["tokens"]>(
+    (state) => state.tokens
+  )
 
     let navigate = useNavigate();
 

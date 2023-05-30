@@ -8,16 +8,16 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { toast } from 'react-toastify';
 import { useSelector } from 'react-redux';
-// import { UserState } from '../../../store/token/Reducer';
+import { UserState } from '../../../store/token/Reducer';
 
 
 function DeletarPostagem() {
     let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
-    // const token = useSelector<UserState, UserState["tokens"]>(
-    //   (state) => state.tokens
-    // )
-     const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<UserState, UserState["tokens"]>(
+      (state) => state.tokens
+    )
+    //  const [token, setToken] = useLocalStorage('token');
     const [post, setPosts] = useState<Postagem>()
 
     useEffect(() => {

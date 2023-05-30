@@ -5,19 +5,19 @@ import './CadastroTema.css';
 import useLocalStorage from 'react-use-localstorage';
 import Tema from '../../../models/Tema';
 import { buscaId, post, put } from '../../../services/Service';
-// import { useSelector } from 'react-redux';
-// import { UserState } from '../../../store/token/Reducer';
+import { useSelector } from 'react-redux';
+import { UserState } from '../../../store/token/Reducer';
 import { toast } from 'react-toastify';
 
 
 function CadastroTema() {
     let navigate = useNavigate();
-    const [token, setToken] = useLocalStorage('token');
+    // const [token, setToken] = useLocalStorage('token');
     const { id } = useParams<{ id: string }>();
 
-    // const token = useSelector<UserState, UserState["tokens"]>(
-    //     (state) => state.tokens
-    // ) -> Redux
+    const token = useSelector<UserState, UserState["tokens"]>(
+        (state) => state.tokens
+    )
 
     const [tema, setTema] = useState<Tema>({
         id: 0,

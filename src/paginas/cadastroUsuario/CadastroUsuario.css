@@ -14,3 +14,12 @@
 .btnCancelar{
     margin-right: 20px !important;
 }
+.imagemUsuario{
+    height: 100px !important;
+    width: 100px !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+

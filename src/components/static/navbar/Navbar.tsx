@@ -41,13 +41,13 @@ function Navbar() {
         navbarComponent =
 
 
-    <AppBar position="static" style={{ background: "#05668D" }}>
+    <AppBar position="static" className='menunavegacao'>
         <Toolbar variant="dense">
-            <Box style={{ cursor: "pointer" }} >
+            {/* <Box style={{ cursor: "pointer" }} >
                 <Typography variant="h5" color="inherit">
                     Code4CC 🌐
                 </Typography>
-            </Box>
+            </Box> */}
 
             <Box display="flex" justifyContent="start">
                 <Link to='/home' className='text-decorator-none'>
@@ -57,12 +57,13 @@ function Navbar() {
                         </Typography>
                     </Box>
                 </Link>
+                <Link to='/perfil' className='text-decorator-none'>
                 <Box mx={1} style={{ cursor: "pointer" }}>
                     <Typography variant="h6" style={{ color: "inherit" }}>
                         Perfil
                     </Typography>
                 </Box>
-
+                </Link>
                 <Link className="text-decorator-none" to="/feed">
                     <Box mx={1} style={{ cursor: "pointer" }}>
                         <Typography variant="h6" color="inherit">
@@ -91,7 +92,7 @@ function Navbar() {
                 </Box> */}
 
                 <Link to='/login' className='text-decorator-none'>
-                    <Box mx={1} style={{ cursoxr: "pointer" }} onClick={goLogout}>
+                    <Box mx={1} style={{ cursor: "pointer" }} onClick={goLogout}>
                         <Typography variant="h6" style={{ color: "white" }}>
                             Logout
                         </Typography>

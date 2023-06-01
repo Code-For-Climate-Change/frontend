@@ -1,10 +1,12 @@
 .text-decorator-none{
     text-decoration: none !important;
+    
+
 }
 
 .titulo{
-    color: blue;
-    text-align: center;
+    color: blue !important; 
+    text-align: center !important;
 }
 
 .img{
@@ -12,4 +14,24 @@
     height: 500px;
     display: block;
     margin: 0 auto;
+}
+.fotofundo{
+   /* background-image : url(https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+   background-repeat: no-repeat;
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1/sua/imagem.jpg);
+
+}
+.nome{
+   color: white !important;
+    font-Weight: bold !important;
+    font-size: 70px !important;
+    
+}
+.botaohome{
+  border-color: rgb(0, 0, 0) !important;
+   background-color: #f7fa7d !important;
+    color: rgb(0, 0, 0) !important;
 }

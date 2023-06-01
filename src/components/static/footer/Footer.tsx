@@ -7,6 +7,7 @@ import { Box } from '@mui/material';
 import { useSelector } from 'react-redux';
 import { UserState } from '../../../store/token/Reducer';
 import { Link } from 'react-router-dom';
+ 
 
 function Footer() {
 
@@ -18,9 +19,9 @@ function Footer() {
     if (token !== '') {
         footerComponent =
 
-    <Grid container direction="row" justifyContent="center" alignItems="center">
+    <Grid container direction="row" justifyContent="center" alignItems="center" >
         <Grid alignItems="center" item xs={12}>
-            <Box style={{ backgroundColor: "#3F51B5", height: "120px" }}>
+            <Box className='menunavegacao'>
                 <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
                     <Typography variant="h5" align="center" gutterBottom style={{ color: "white" }}>Siga-nos nas redes sociais </Typography>
                 </Box>
@@ -36,27 +37,27 @@ function Footer() {
                     </a>
                 </Box>
             </Box>
-            <Box style={{ backgroundColor: "#ebf2fa", height: "60px" }}>
+            <Box className='menunavegacao'>
                 <Box paddingTop={1}>
-                    <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "#05668d" }} >Code For Climate Change © 2023</Typography>
+                    <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >Code For Climate Change © 2023</Typography>
                 </Box>
-                <Link to='/sobre'>
+                <Link to='/sobre'  className='text-decorator-none'>
                 <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="subtitle2" align="center" color="inherit">
+                    <Typography variant="subtitle2" align="center" style={{ color: "white" }}>
                         Sobre Nós
                     </Typography>
                 </Box>
                 </Link>
-                <Link to='/contatos'>
+                <Link to='/contatos'  className='text-decorator-none'>
                 <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="subtitle2" align="center" color="inherit">
+                    <Typography variant="subtitle2" align="center"  style={{ color: "white" }}>
                         Contatos
                     </Typography>
                 </Box>
                 </Link>
                 <Box>
-                    <a target="_blank" href="https://brasil.generation.org">
-                        <Typography variant="subtitle2" gutterBottom style={{ color: "#05668d" }} align="center">brasil.generation.org</Typography>
+                    <a target="_blank" href="https://brasil.generation.org"  className='text-decorator-none'>
+                        <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">brasil.generation.org</Typography>
                     </a>
                 </Box>
             </Box>

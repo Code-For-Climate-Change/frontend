@@ -5,6 +5,7 @@ interface User {
     tipoUsuario: string;
     usuario: string;
     senha: string;
+    foto?: string;
 }
 
 export default User;

@@ -19,7 +19,8 @@ function CadastroUsuario() {
             dataNascimento: '',
             tipoUsuario: '',
             usuario: '',
-            senha: ''
+            senha: '',
+            foto: ''
         })
     const [userResult, setUserResult] = useState<User>(
         {
@@ -28,7 +29,8 @@ function CadastroUsuario() {
             dataNascimento: '',
             tipoUsuario: '',
             usuario: '',
-            senha: ''
+            senha: '',
+            foto: ''
         })
     useEffect(() => {
         if (userResult.id != 0) {
@@ -49,7 +51,7 @@ function CadastroUsuario() {
         e.preventDefault()
         if (confirmarSenha == user.senha) {
             cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
-            
+
             toast.success('Usuario cadastrado com sucesso!', {
                 position: "top-right",
                 autoClose: 2000,
@@ -87,6 +89,25 @@ function CadastroUsuario() {
                         <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Usuario' variant='outlined' name='usuario' margin='normal' fullWidth />
                         <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+                        <TextField
+                            id="foto"
+                            label="Insira o Link da sua foto"
+                            placeholder="Insira o nome de usuário:"
+                            variant="outlined"
+                            name="foto"
+                            margin="normal"
+                            fullWidth
+                            type="text"
+                            value={user.foto}
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                        />
+                        <div
+                            className="imagemUsuario"
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            style={{ backgroundImage: user.foto !== '' ? `url(${user.foto})` : 'url(https://i.imgur.com/qDUPJ43_d.webp?maxwidth=760&fidelity=grand)' }}
+                        >
+                        </div>
+
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar'>

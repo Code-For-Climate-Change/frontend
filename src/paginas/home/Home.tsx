@@ -34,26 +34,43 @@ function Home() {
 
     return (
         <>
-            <Grid container direction="row" justifyContent="center" alignItems="center" style={{ backgroundColor: "#05668D" }}>
-                <Grid alignItems="center" item xs={6}>
+            <Grid container direction="row" justifyContent="center" alignItems="center"  className='fotofundo'>
+                <Grid alignItems="center" item xs={12}>
                     <Box paddingX={20} >
+                         <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='nome'>Code4CC</Typography>
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>Vamos cuidar do planeta!</Typography>
+                        
                     </Box>
                         <Box display="flex" justifyContent="center">
                             <Box marginRight={1}>
                                 <ModalPostagem />
                             </Box>
                             <Link to="/feed" className='text-decorator-none'>
-                            <Button variant="outlined" style={{ borderColor: "white", backgroundColor: "#3F51B5", color: "white" }}>
+                            <Button variant="outlined" className='botaohome'>
                                 Ver Postagens
                             </Button>
                             </Link>
+                            
                         </Box>
+                        <Box paddingX={20} >
+                    <Typography variant="h5" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}> 
+                    </Typography>
+                    <Typography variant="h5" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}> Objetivos de Desenvolvimento Sustentável (ODS) 13
+ </Typography>
+ </Box>
+ <Grid alignItems="center" item xs={12}>
+ <Box paddingX={10} >
+                    {/* <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}> Rede social voltada para alertar sobre efeitos de comportamentos humanos que impactam em desastres naturais. Promovendo eventos para voluntários e orientações para prevenção e publicações
+ </Typography> */}
+                    <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}> </Typography>
+                        
+                    </Box>
+                    </Grid>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://www.estrategiaods.org.br/wp-content/uploads/2021/10/ODS13-1.jpg" alt="" width="500px" height="500px" />
-                </Grid>
+                {/* <Grid item xs={6} >
+                    <img src="" alt="" width="500px" height="500px" /> 
+                </Grid> */}
                 <Grid xs={12} style={{ backgroundColor: "white" }}>
                 </Grid>
             </Grid>

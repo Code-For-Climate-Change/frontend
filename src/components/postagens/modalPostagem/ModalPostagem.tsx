@@ -14,18 +14,19 @@ function getModalStyle() {
 
     return {
         top:`${ top }%`,
-            left:`${ left }%`,
-                transform: `translate(-${ top } %, -${ left } %)`,
-  };
+        left:`${ left }%`,
+        transform: `translate(-${ top } %, -${ left } %)`,
+    };
 }
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         paper: {
-            position: 'absolute',
+            /* position: 'relative', */
             width: 400,
             backgroundColor: theme.palette.background.paper,
-            border: '2px solid #000',
+            border: '4px solid green',
+            borderRadius: '15px',
             boxShadow: theme.shadows[5],
             padding: theme.spacing(2, 4, 3),
         },
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 function ModalPostagem() {
     const classes = useStyles();
-    const [modalStyle] = React.useState(getModalStyle);
+    const [modalStyle] = React.useState(getModalStyle());
     const [open, setOpen] = React.useState(false);
 
     const handleOpen = () => {

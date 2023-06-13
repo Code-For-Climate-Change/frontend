@@ -29,32 +29,39 @@ function Footer() {
                     <a href="https://github.com/Code-For-Climate-Change" target="_blank">
                         <GithubIcon style={{ fontSize: 60, color: "white" }} />
                     </a>
-                    <a href="https://www.instagram.com/" target="_blank">
+                    {/* <a href="https://www.instagram.com/" target="_blank">
                         <InstagramIcon style={{ fontSize: 60, color: "white" }} />
                     </a>
                     <a href="" target="_blank">
                         <LinkedInIcon style={{ fontSize: 60, color: "white" }} />
-                    </a>
+                    </a> */}
                 </Box>
             </Box>
-            <Box className='menunavegacao'>
+            <Box className='menunavegacao' >
                 <Box paddingTop={1}>
                     <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >Code For Climate Change © 2023</Typography>
                 </Box>
+                <Box display="flex" justifyContent="center" >
                 <Link to='/sobre'  className='text-decorator-none'>
                 <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="subtitle2" align="center" style={{ color: "white" }}>
-                        Sobre Nós
-                    </Typography>
+                 
+                   <Typography variant="subtitle2" align="center" style={{ color: "white" }}>
+                        Contatos 
+                        
+                    </Typography> 
+                   
                 </Box>
                 </Link>
                 <Link to='/contatos'  className='text-decorator-none'>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="subtitle2" align="center"  style={{ color: "white" }}>
-                        Contatos
+                <Box mx={1} style={{ cursor: "pointer" }} >
+                   
+                    <Typography variant="subtitle2" align="center"  style={{ color: "white" }} >
+                        Sobre Nós
                     </Typography>
+                   
                 </Box>
                 </Link>
+                </Box>
                 <Box>
                     <a target="_blank" href="https://brasil.generation.org"  className='text-decorator-none'>
                         <Typography variant="subtitle2" gutterBottom style={{ color: "white" }} align="center">brasil.generation.org</Typography>

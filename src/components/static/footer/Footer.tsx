@@ -42,7 +42,7 @@ function Footer() {
                     <Typography variant="subtitle2" align="center" gutterBottom style={{ color: "white" }} >Code For Climate Change © 2023</Typography>
                 </Box>
                 <Box display="flex" justifyContent="center" >
-                <Link to='/sobre'  className='text-decorator-none'>
+                <Link to='/contatos'  className='text-decorator-none'>
                 <Box mx={1} style={{ cursor: "pointer" }}>
                  
                    <Typography variant="subtitle2" align="center" style={{ color: "white" }}>
@@ -52,7 +52,7 @@ function Footer() {
                    
                 </Box>
                 </Link>
-                <Link to='/contatos'  className='text-decorator-none'>
+                <Link to='/sobre'  className='text-decorator-none'>
                 <Box mx={1} style={{ cursor: "pointer" }} >
                    
                     <Typography variant="subtitle2" align="center"  style={{ color: "white" }} >

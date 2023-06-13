@@ -30,8 +30,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/contatos" element={<Contatos />} />
+          <Route path="/contatos" element={<Sobre />} />
+          <Route path="/sobre" element={<Contatos />} />
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/cadastrousuario" element={<CadastroUsuario />} />

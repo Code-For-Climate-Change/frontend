@@ -41,71 +41,73 @@ function Navbar() {
         navbarComponent =
 
 
-    <AppBar position="static" className='menunavegacao'>
-        <Toolbar variant="dense">
-            {/* <Box style={{ cursor: "pointer" }} >
+            <AppBar position="static" className='menunavegacao'>
+                <Toolbar variant="dense">
+                    {/* <Box style={{ cursor: "pointer" }} >
                 <Typography variant="h5" color="inherit">
                     Code4CC 🌐
                 </Typography>
             </Box> */}
 
-            <Box display="flex" justifyContent="start">
-                <Link to='/home' className='text-decorator-none'>
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" style={{ color: "white" }}>
-                            Home
-                        </Typography>
-                    </Box>
-                </Link>
-                <Link to='/perfil' className='text-decorator-none'>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" style={{ color: "inherit" }}>
-                        Perfil
-                    </Typography>
-                </Box>
-                </Link>
-                <Link className="text-decorator-none" to="/feed">
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            Feed
-                        </Typography>
-                    </Box>
-                </Link>
+                    <Box display="flex" justifyContent="start">
+                        <Link to='/home' className='text-decorator-none'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" style={{ color: "white" }}>
+                                    Home
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link to='/perfil' className='text-decorator-none'>
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" style={{ color: "inherit" }}>
+                                    Perfil
+                                </Typography>
+                            </Box>
+                        </Link>
+                        <Link className="text-decorator-none" to="/feed">
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Feed
+                                </Typography>
+                            </Box>
+                        </Link>
 
-                <Link className="text-decorator-none" to="/temas">
-                    <Box mx={1} style={{ cursor: "pointer" }}>
-                        <Typography variant="h6" color="inherit">
-                            Tema
-                        </Typography>
+                        <Link className="text-decorator-none" to="/temas">
+                            <Box mx={1} style={{ cursor: "pointer" }}>
+                                <Typography variant="h6" color="inherit">
+                                    Tema
+                                </Typography>
+                            </Box>
+                        </Link>
+
+                                                                {/* <Box mx={1} style={{ cursor: "pointer" }}>
+                                                            <Typography variant="h6" color="inherit">
+                                                                Sobre
+                                                            </Typography>
+                                                        </Box>
+                                                        <Box mx={1} style={{ cursor: "pointer" }}>
+                                                            <Typography variant="h6" color="inherit">
+                                                                Contatos
+                                                            </Typography>
+                                                        </Box> */}
                     </Box>
-                </Link>
-
-                {/* <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" color="inherit">
-                        Sobre
-                    </Typography>
-                </Box>
-                <Box mx={1} style={{ cursor: "pointer" }}>
-                    <Typography variant="h6" color="inherit">
-                        Contatos
-                    </Typography>
-                </Box> */}
-
-                <Link to='/login' className='text-decorator-none'>
-                    <Box mx={1} style={{ cursor: "pointer" }} onClick={goLogout}>
-                        <Typography variant="h6" style={{ color: "white" }}>
-                            Logout
-                        </Typography>
+                    <Box display="flex" justifyContent="center">
+                        <Link to='/login' className='text-decorator-none'>
+                            <Box mx={1} style={{ cursor: "pointer" }} onClick={goLogout}>
+                                <Typography variant="h6" style={{ color: "white" }}>
+                                    Logout
+                                </Typography>
+                            </Box>
+                        </Link>
                     </Box>
-                </Link>
-            </Box>
 
-        </Toolbar>
-    </AppBar>
+
+                </Toolbar>
+            </AppBar>
     }
     return (
         <>
-        {navbarComponent}
+            {navbarComponent}
         </>
     )
 }

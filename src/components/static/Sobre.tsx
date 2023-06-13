@@ -1,23 +1,56 @@
 import React from "react";
 import { Button, Card, CardActionArea, CardActions, CardContent, CardMedia, Typography, makeStyles } from "@material-ui/core";
 import './Sobre.css'
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GithubIcon from '@material-ui/icons/GitHub';
 
 function Sobre() {
 
-    const integrantes = [
-        { nome: 'Beatriz Seraphim', texto: 'Apaixonada por tecnologia', foto: 'https://i.imgur.com/sjp9Eao.jpeg' },
-        { nome: 'Daisy Santos', texto: 'Adora novos desafios.', foto: 'https://i.imgur.com/EORrmGw.png' },
-        { nome: 'Gabriel Machado', texto: 'Apaixonada por tecnologia', foto: 'https://i.imgur.com/Tk5cNgY.png' },
-        { nome: 'Heimy Dias', texto: 'Apaixonada por tecnologia', foto: 'https://i.imgur.com/6kQdsgt.jpg' },
-        { nome: 'Marcos Caldas', texto: 'Apaixonado por programação.', foto: 'https://avatars.githubusercontent.com/u/59856706?s=400&u=0b67f45beab5a074e92bc4af114a18dedcc5c7d8&v=4' }
-    ];
+    const integrantes = [ 
+        { nome: 'Beatriz Seraphim', texto: 'o meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas e acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!', foto: 'https://i.imgur.com/sjp9Eao.jpeg',
+          linkedin: <a href="https://www.linkedin.com/in/beatriz-seraphim/
+          " target="_blank">
+        <LinkedInIcon style={{ fontSize: 60, color: "#0A66C2" }} />
+    </a> , github: <a href="https://github.com/BeatrizSeraphim" target="_blank">
+                        <GithubIcon style={{ fontSize: 60, color: "black" }} />
+                    </a>},
+        { nome: 'Daisy Santos', texto: 'o meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas e acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!', foto: 'https://i.imgur.com/EORrmGw.png' ,
+        linkedin: <a href="https://www.linkedin.com/in/daisy-santos-s/
+        " target="_blank">
+      <LinkedInIcon style={{ fontSize: 60, color: "#0A66C2" }} />
+  </a> , github: <a href="https://github.com/daisysantos" target="_blank">
+                        <GithubIcon style={{ fontSize: 60, color: "black" }} />
+                    </a>},
+        { nome: 'Gabriel Machado', texto: 'o meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas e acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!', foto: 'https://i.imgur.com/Tk5cNgY.png',
+        linkedin: <a href="https://www.linkedin.com/in/gabriel-machado-s/
+        " target="_blank">
+      <LinkedInIcon style={{ fontSize: 60, color: "#0A66C2" }} />
+  </a> , github: <a href="https://github.com/GabriMachado" target="_blank">
+                        <GithubIcon style={{ fontSize: 60, color: "black" }} />
+                    </a>},
+        { nome: 'Heimy Dias', texto: 'o meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas e acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!', foto: 'https://i.imgur.com/6kQdsgt.jpg' ,
+        linkedin: <a href="https://www.linkedin.com/in/heimydias/
+        " target="_blank">
+      <LinkedInIcon style={{ fontSize: 60, color: "#0A66C2" }} />
+  </a> , github: <a href="https://github.com/heimydias" target="_blank">
+                        <GithubIcon style={{ fontSize: 60, color: "black" }} />
+                    </a>},
+        { nome: 'Marcos Caldas', texto: 'o meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas e acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!        ', foto: 'https://avatars.githubusercontent.com/u/59856706?s=400&u=0b67f45beab5a074e92bc4af114a18dedcc5c7d8&v=4' ,
+        linkedin: <a href="https://www.linkedin.com/in/marcos-v-ramos-caldas/
+        " target="_blank">
+      <LinkedInIcon style={{ fontSize: 60, color: "#0A66C2" }} />
+  </a> , github: <a href="https://github.com/Marcos-V-Ramos" target="_blank">
+                        <GithubIcon style={{ fontSize: 60, color: "black" }} />
+                    </a>}
+ 
+ ];
 
     const useStyles = makeStyles({
         root: {
             maxWidth: 345,
         },
         media: {
-            height: 140,
+            height: 420,
         },
     });
 
@@ -28,18 +61,23 @@ function Sobre() {
             { integrantes.map(integrante =>
                 (
                     <Card className={classes.root}>
-                        <CardActionArea>
+                        <CardActionArea >
                             <CardMedia
                                 className={classes.media}
                                 image={integrante.foto}
                                 title="Contemplative Reptile"
+                                
                             />
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="h2">
+                                <Typography gutterBottom variant="h5" component="h2" align="center">
                                     {integrante.nome}
                                 </Typography>
-                                <Typography variant="body2" color="textSecondary" component="p">
+                                <Typography variant="body2" color="textSecondary" component="p" align="center">
                                     {integrante.texto}
+                                </Typography>
+                                <Typography align="center">
+                                {integrante.linkedin}
+                                {integrante.github}
                                 </Typography>
                             </CardContent>
                         </CardActionArea>

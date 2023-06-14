@@ -1,0 +1,10 @@
+.botaoatualizar{
+    border-color: rgb(0, 0, 0) !important;
+     background-color: #f7fa7d !important;
+      color: rgb(0, 0, 0) !important;
+  }
+
+  .botaodeletar{
+    border-color:#000000 !important;
+    background-color:#79c68f !important;
+  }

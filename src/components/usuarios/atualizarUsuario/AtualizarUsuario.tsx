@@ -254,7 +254,7 @@ function AtualizarUsuario() {
                             Cancelar
                         </Button>
                     </Link>
-                    <Button type="submit" variant="contained" color="primary"
+                    <Button type="submit" variant="contained" color="primary" className="botaoatualizar"
                      disabled={ checaNome || checaUsuario ||  checaDataNascimento || checaTipoUsuario ||
                                 confirmarSenha !== user.senha ||  checaVazio ? true : false}
                     >

@@ -120,7 +120,7 @@ function CadastroTema() {
                 <Typography variant="h3" color="textSecondary" component="h1" align="center">Formulário de cadastro tema</Typography>
                 <TextField value={tema.tema} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="tema" label="titulo" variant="outlined" name="tema" margin="normal" fullWidth />
                 <TextField value={tema.descricao} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="descricao" label="descricao" variant="outlined" name="descricao" margin="normal" fullWidth />
-                <Button type="submit" variant="contained" color="primary">
+                <Button type="submit" variant="contained" color="secondary" className="botaodeletar">
                     Finalizar
                 </Button>
             </form>

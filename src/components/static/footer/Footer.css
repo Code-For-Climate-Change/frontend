@@ -2,8 +2,16 @@
  background: rgb(0,156,142) !important;
 background: linear-gradient(90deg, rgba(0,156,142,1) 0%, rgba(121,198,143,1) 35%, rgba(247,250,125,0.7987570028011204) 100%) !important;
 height: 120px; 
+
 }
 .text-decorator-none{
     text-decoration: none !important;
     
+}
+
+.rodapeFixo {
+    bottom: 0;
+    position: display flex;
+    width: 100%;
+    text-align: center;
 }

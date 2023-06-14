@@ -54,7 +54,7 @@ function ListaTema() {
         <>
             <Link to="/formularioTema">
                 <Box mx={1} m={2}>
-                    <Button variant="contained" size='small' color="primary">
+                    <Button variant="contained" size='small' color="secondary" className="botaodeletar">
                         Cadastre aqui um novo tema
                     </Button>
                 </Box>

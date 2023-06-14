@@ -19,13 +19,13 @@
 }
 .fotologin{
     width: 1000px;
-    min-height: 650px;
+    min-height: 625px;
     background-repeat: no-repeat;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1
-    )), url(https://i.imgur.com/0W0S8vq.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0
+    )), url(https://i.imgur.com/xxyZpRF.jpg);
 }
 /* .teste{
     color: aliceblue;
@@ -35,8 +35,7 @@
 .campoentrada{
     border: white solid 2px !important;
     background-color: white;
-    border-color: white !important;
-    
+    border-color: white !important;;    
 }
 .campoentrada:focus {
     border-color: red;

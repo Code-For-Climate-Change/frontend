@@ -70,7 +70,7 @@ function Perfil() {
 
     useEffect(() => {
         if (id !== undefined) {
-            findById('7')
+            findById('10')
         } else {
             alert('id inexistente')
         }
@@ -78,16 +78,17 @@ function Perfil() {
     
 
     return (
+        <div className="teste">
         <Box className='card-principal'>
             <Box className='card-container-imagem'>
                 <img className='card-imagem'
                     src={user.foto}
                     alt={user.nome} />
-                <Link to="/editar" className="text-decorator-none">
+                {/* <Link to="/editar" className="text-decorator-none">
                     <Button variant="contained" color="info" >
                         Editar Perfil
                     </Button>
-                </Link>
+                </Link> */}
             </Box>
 
             <Box className='card-container-info'>
@@ -98,6 +99,7 @@ function Perfil() {
                 </Box>
             </Box>
         </Box>
+        </div>
     )
 }
 

@@ -11,7 +11,7 @@ height: 120px;
 
 .rodapeFixo {
     bottom: 0;
-    position: display flex;
+    position: absolute !important;
     width: 100%;
     text-align: center;
 }

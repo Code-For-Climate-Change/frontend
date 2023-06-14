@@ -61,10 +61,4 @@ function Contatos() {
     )
 }
 
-
-// <div>
-//                 {integrante.nome} <br/>
-//                 {integrante.texto} <br/>
-//                 {integrante.foto} <br/>
-//             </div>
 export default Contatos;

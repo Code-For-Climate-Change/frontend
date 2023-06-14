@@ -12,3 +12,9 @@
     border-color:#000000 !important;
     background-color:#79c68f !important;
   }
+
+  .teste {
+    height: 65vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }

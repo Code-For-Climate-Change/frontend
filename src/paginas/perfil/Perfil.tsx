@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router';
 
 import User from '../../models/User';
-import { buscaId } from '../../services/Service';
+import { busca, buscaId } from '../../services/Service';
 import { addToken } from '../../store/token/Actions';
 import { UserState } from '../../store/token/Reducer';
 import './Perfil.css';
@@ -56,7 +56,7 @@ function Perfil() {
     // Método para pegar os dados de um Usuário especifico pelo ID
     async function findById(id: string) {
         try {
-            await buscaId(`/usuarios/${id}`, setUser, {
+            await busca(`/usuarios/${id}`, setUser, {
                 headers: {
                     'Authorization': token
                 }
@@ -70,9 +70,12 @@ function Perfil() {
 
     useEffect(() => {
         if (id !== undefined) {
-            findById(id)
+            findById('7')
+        } else {
+            alert('id inexistente')
         }
     }, [id])
+    
 
     return (
         <Box className='card-principal'>
@@ -86,7 +89,6 @@ function Perfil() {
                     </Button>
                 </Link>
             </Box>
-
 
             <Box className='card-container-info'>
                 <Box>

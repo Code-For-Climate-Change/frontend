@@ -28,7 +28,7 @@ function Sobre() {
   </a> , github: <a href="https://github.com/GabriMachado" target="_blank">
                         <GithubIcon style={{ fontSize: 60, color: "black" }} />
                     </a>},
-        { nome: 'Heimy Dias', texto: 'O meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas e acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!', foto: 'https://i.imgur.com/6kQdsgt.jpg' ,
+        { nome: 'Heimy Dias', texto: 'Meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas, acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!', foto: 'https://i.imgur.com/6kQdsgt.jpg' ,
         linkedin: <a href="https://www.linkedin.com/in/heimydias/
         " target="_blank">
       <LinkedInIcon style={{ fontSize: 60, color: "#0A66C2" }} />

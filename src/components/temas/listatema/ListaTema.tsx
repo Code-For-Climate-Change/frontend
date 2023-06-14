@@ -51,7 +51,7 @@ function ListaTema() {
     }, [temas.length])
 
     return (
-        <>
+        <div className="teste">
             <Link to="/formularioTema">
                 <Box mx={1} m={2}>
                     <Button variant="contained" size='small' color="secondary" className="botaodeletar">
@@ -94,7 +94,7 @@ function ListaTema() {
                     </Box>
                 ))
             }
-        </>
+        </div>
     );
 }
 export default ListaTema;

@@ -12,3 +12,9 @@
     border-color:#000000 !important;
     background-color:#79c68f !important;
   }
+
+  .conteudo {
+    height: 65vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }

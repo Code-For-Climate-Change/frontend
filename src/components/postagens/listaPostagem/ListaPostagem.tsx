@@ -53,7 +53,7 @@ function ListaPostagem() {
   }, [posts.length])
 
   return (
-    <>
+    <div className='conteudo'>
       {
         posts.map(post => (
           <Box m={2} >
@@ -95,7 +95,7 @@ function ListaPostagem() {
           </Box>
         ))
       }
-    </>
+    </div>
   )
 }
 

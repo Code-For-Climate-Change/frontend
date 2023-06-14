@@ -1,0 +1,6 @@
+.container {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url(https://midias.agazeta.com.br/2022/09/10/vista-aerea-da-floresta-amazonica-833392.jpg);
+}

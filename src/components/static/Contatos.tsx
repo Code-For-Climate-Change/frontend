@@ -8,7 +8,7 @@ function Contatos() {
 
     const integrantes = [ 
         
-        { nome: 'Code4CC', texto: 'o meu propósito é contribuir para o desenvolvimento de produtos, serviços e projetos que impactem positivamente a vida das pessoas e acredito que podemos fazer isso juntos então quero te convidar a olhar minhas mídias sociais para conhecer alguns dos meus projetos!' , 
+        { nome: 'Code4CC', texto: 'Unimos nossos conhecimentos em programação com a nossa vontade de contribuir com a mudança global do clima e desenvolvemos o Code For Climate Change, nos baseando na ODS-13 e na situação atual do nosso Planeta. Decidimos criar uma rede social pois identificamos uma grande oportunidade de visibilidade e movimentação com foco em preservar o planeta. A idéia é potencializar a conscientização referente ao aquecimento global, e impactar todas as gerações, assim o movimento é maior e efetivo.' , 
         foto: 'https://i.imgur.com/h29fit4.jpg'}
  
  ];

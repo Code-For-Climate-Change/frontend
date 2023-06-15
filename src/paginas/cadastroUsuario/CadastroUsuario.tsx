@@ -76,6 +76,17 @@ function CadastroUsuario() {
             });
         }
     }
+
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const validarEmail = emailRegex.test(user.usuario);
+
+    const checaNome = user.nome.length > 0 && user.nome.length < 3
+    const checaUsuario = !validarEmail && user.usuario.length > 0
+    const checaSenha = user.senha.length > 0 && user.senha.length < 8
+    const checaConfirmarSenha = confirmarSenha !== user.senha
+    const checaVazio = user.nome.length === 0 || user.usuario.length === 0 ||
+        user.senha.length === 0 || confirmarSenha.length === 0
+
     return (
         <Grid container direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} className='imagem3'></Grid>
@@ -83,12 +94,18 @@ function CadastroUsuario() {
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
-                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
-                        <TextField value={user.dataNascimento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='dataNascimento' label='AAA-MM-DD' variant='outlined' name='dataNascimento' margin='normal' fullWidth />
+                        <div
+                            className="imagemUsuario"
+                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                            style={{ backgroundImage: user.foto !== '' ? `url(${user.foto})` : 'url(https://i.imgur.com/qDUPJ43_d.webp?maxwidth=760&fidelity=grand)' }}
+                        >
+                        </div>
+                        <TextField  error={checaNome} value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth helperText={checaNome ? 'Digite um nome válido!' : ''}/>
+                        <TextField value={user.dataNascimento} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='dataNascimento' label='AAA-MM-DD' variant='outlined' name='dataNascimento' margin='normal' fullWidth/>
                         <TextField value={user.tipoUsuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='tipoUsuario' label='Tipo de Usuario' variant='outlined' name='tipoUsuario' margin='normal' fullWidth />
-                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+                        <TextField error={checaUsuario} value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth helperText={checaUsuario ? 'Digite um e-mail válido!' : ''}/>
+                        <TextField error={checaSenha} value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth  helperText={checaSenha ? "A senha precisa ter no mínimo 8 caracteres" : ""}/>
+                        <TextField error={checaConfirmarSenha} value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirmar Senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth helperText={checaConfirmarSenha ? 'As senhas não conferem!' : ''}/>
                         <TextField
                             id="foto"
                             label="Insira o Link da sua foto"
@@ -101,13 +118,6 @@ function CadastroUsuario() {
                             value={user.foto}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
                         />
-                        <div
-                            className="imagemUsuario"
-                            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-                            style={{ backgroundImage: user.foto !== '' ? `url(${user.foto})` : 'url(https://i.imgur.com/qDUPJ43_d.webp?maxwidth=760&fidelity=grand)' }}
-                        >
-                        </div>
-
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar'>

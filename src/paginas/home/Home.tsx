@@ -61,7 +61,9 @@ function Home() {
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}> Objetivos de Desenvolvimento Sustentável (ODS) 13
                         </Typography>
                     </Box>
-                    <Grid alignItems="center" item xs={12}>
+                    <Grid alignItems="center" 
+                    //item xs={12}
+                    >
                         <Box className='the-box' >
                             {/* <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}> Rede social voltada para alertar sobre efeitos de comportamentos humanos que impactam em desastres naturais. Promovendo eventos para voluntários e orientações para prevenção e publicações
  </Typography> */}

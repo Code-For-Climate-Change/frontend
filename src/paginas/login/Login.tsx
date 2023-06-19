@@ -78,7 +78,7 @@ function Login() {
             alignItems='center' 
             // xs={6}
             >
-                <Box paddingX={20}>
+                <Box className='the-box'>
                     <form onSubmit={onSubmit} className='campoentrada'>
                         <Typography variant='h3' gutterBottom component='h3' align='center' className='tituloEntrar'>Entrar</Typography>
                         <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth/>

@@ -25,13 +25,13 @@ function Contatos() {
     const classes = useStyles();
 
     return (
-        <div className="container">
+        <div className="the-box">
             { integrantes.map(integrante =>
                 (
-                    <Card className={classes.root}>
+                    <Card className="the-box">
                         <CardActionArea >
                             <CardMedia
-                                className={classes.media}
+                                className="the-box"
                                 image={integrante.foto}
                                 title="Contemplative Reptile"
                                 

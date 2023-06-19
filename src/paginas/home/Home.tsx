@@ -35,8 +35,10 @@ function Home() {
     return (
         <>
             <Grid container direction="row" justifyContent="center" alignItems="center" className='fotofundo'>
-                <Grid alignItems="center" item xs={12}>
-                    <Box paddingX={20} >
+                <Grid alignItems="center" 
+                //item xs={12}
+                >
+                    <Box className='the-box'>
                         <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='nome'>Code4CC</Typography>
                         <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>Vamos cuidar do planeta!</Typography>

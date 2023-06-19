@@ -36,3 +36,7 @@
    background-color: #f7fa7d !important;
     color: rgb(0, 0, 0) !important;
 }
+
+.the-box {
+    margin: 0 1rem;
+}

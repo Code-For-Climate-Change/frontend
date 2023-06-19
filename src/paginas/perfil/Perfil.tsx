@@ -70,7 +70,7 @@ function Perfil() {
 
     useEffect(() => {
         if (id !== undefined) {
-            findById('10')
+            findById(id)
         } else {
             alert('id inexistente')
         }

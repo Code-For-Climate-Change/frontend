@@ -55,14 +55,14 @@ function Home() {
                         </Link>
 
                     </Box>
-                    <Box paddingX={20} >
+                    <Box className='the-box' >
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}>
                         </Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}> Objetivos de Desenvolvimento Sustentável (ODS) 13
                         </Typography>
                     </Box>
                     <Grid alignItems="center" item xs={12}>
-                        <Box paddingX={10} >
+                        <Box className='the-box' >
                             {/* <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}> Rede social voltada para alertar sobre efeitos de comportamentos humanos que impactam em desastres naturais. Promovendo eventos para voluntários e orientações para prevenção e publicações
  </Typography> */}
                             <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}> </Typography>
@@ -73,7 +73,9 @@ function Home() {
                 {/* <Grid item xs={6} >
                     <img src="" alt="" width="500px" height="500px" /> 
                 </Grid> */}
-                <Grid xs={12} style={{ backgroundColor: "white" }}>
+                <Grid 
+                //xs={12} 
+                style={{ backgroundColor: "white" }}>
                 </Grid>
             </Grid>
 

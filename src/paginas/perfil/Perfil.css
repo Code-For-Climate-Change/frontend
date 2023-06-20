@@ -1,5 +1,6 @@
 .card-principal{
     display: flex;
+    margin: 0 1rem;
     border-radius: 32px 0;
     padding: 20px;
     margin: 20px;
@@ -8,6 +9,7 @@
 
 .card-container-imagem{
     display: flex;
+    margin: 0 1rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -28,6 +30,7 @@
     border-radius: 50%;
     border: 5px solid white;
     object-fit: cover;
+    margin: 0 1rem;
 }
 
 .card-container-texto{
@@ -54,3 +57,7 @@ h3{
     overflow-x: hidden;
     overflow-y: scroll;
   }
+
+  .the-box {
+    margin: 0 1rem;
+}

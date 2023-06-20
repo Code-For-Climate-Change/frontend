@@ -13,11 +13,8 @@
 
 .btnCancelar{
     margin-right: 20px !important;
-    
-
-    
-
 }
+
 .imagemUsuario{
     height: 130px !important;
     width: 130px !important;
@@ -28,4 +25,8 @@
     margin-left: 37%;
 }
 
+.respon{
+    display: flex;
+    flex-wrap: wrap;
+}
 

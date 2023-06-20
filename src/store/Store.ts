@@ -4,4 +4,4 @@ import { reducer } from "./token/Reducer";
 
 const store = createStore(reducer);
 
-export default store;
+export default store;   

@@ -27,6 +27,13 @@ function Perfil() {
         (state) => state.tokens
     )
 
+    const state = useSelector<UserState, any>(
+        (state) => state
+    )
+
+
+    console.log(id, token, state)
+
     const [user, setUser] = useState<User>({
         id: +id,
         nome: '',
@@ -104,5 +111,3 @@ function Perfil() {
 }
 
 export default Perfil
-
-

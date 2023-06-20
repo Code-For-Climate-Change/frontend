@@ -10,8 +10,10 @@ export const cadastroUsuario = async(url:any , dados: any, setDado: any) =>{
     setDado(resposta.data)
 }
 
-export const login = async(url:any , dados: any, setDado: any) =>{
+export const login = async(url:any , dados: any, setDado: any, setDado2) =>{
     const resposta = await api.post(url, dados)
+    
+    setDado2(resposta.data.id)
     setDado(resposta.data.token)
 }
 

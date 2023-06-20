@@ -47,7 +47,7 @@ function Sobre() {
 
     const useStyles = makeStyles({
         root: {
-            maxWidth: 345,
+            maxWidth: 420,
         },
         media: {
             height: 420,
@@ -57,13 +57,13 @@ function Sobre() {
     const classes = useStyles();
 
     return (
-        <div className="the-box">
+        <div className="container">
             { integrantes.map(integrante =>
                 (
-                    <Card className="the-box">
+                    <Card className={classes.root}>
                         <CardActionArea >
-                            <CardMedia
-                                className="the-box"
+                            <CardMedia 
+                                className={classes.media}
                                 image={integrante.foto}
                                 title="Contemplative Reptile"
                                 

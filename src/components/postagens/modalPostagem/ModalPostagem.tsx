@@ -23,7 +23,8 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         paper: {
             /* position: 'relative', */
-            width: 650,
+            maxWidth: 650,
+            margin: '0 auto',
             backgroundColor: theme.palette.background.paper,
             border: '4px solid green',
             borderRadius: '15px',

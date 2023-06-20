@@ -17,12 +17,11 @@ function Perfil() {
 
     const dispatch = useDispatch()
 
-    // Pega o ID guardado no Store
     const id = useSelector<UserState, UserState["id"]>(
         (state) => state.id
     );
 
-    // Pega o Token guardado no Store
+
     const token = useSelector<UserState, UserState["tokens"]>(
         (state) => state.tokens
     )
@@ -60,7 +59,6 @@ function Perfil() {
         }
     }, [token])
 
-    // Método para pegar os dados de um Usuário especifico pelo ID
     async function findById(id: string) {
         try {
             await busca(`/usuarios/${id}`, setUser, {

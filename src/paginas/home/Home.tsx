@@ -39,12 +39,12 @@ function Home() {
                 //item xs={12}
                 >
                     <Box className='the-box'>
-                        <Typography variant="h4" gutterBottom color="textPrimary" component="h4" align="center" className='nome'>Code4CC</Typography>
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
+                        <Typography variant="h2" gutterBottom color="textPrimary" component="h4" align="center" className='nome'>Code4CC</Typography>
+                        <Typography variant="h4" gutterBottom color="textPrimary" component="h3" align="center" style={{ color: "white", fontWeight: "bold" }}>Seja bem vindo(a)!</Typography>
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" style={{ color: "white", fontWeight: "bold" }}>Vamos cuidar do planeta!</Typography>
 
                     </Box>
-                    <Box display="flex" justifyContent="center">
+                    <Box display="flex" flex-wrap="wrap" justifyContent="center">
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
@@ -58,7 +58,7 @@ function Home() {
                     <Box className='the-box' >
                         <Typography variant="h5" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}>
                         </Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}> Objetivos de Desenvolvimento Sustentável (ODS) 13
+                        <Typography variant="h6" gutterBottom color="textPrimary" component="h6" align="center" style={{ color: "white", fontWeight: "bold" }}> Objetivos de Desenvolvimento Sustentável (ODS) 13
                         </Typography>
                     </Box>
                     <Grid alignItems="center" 

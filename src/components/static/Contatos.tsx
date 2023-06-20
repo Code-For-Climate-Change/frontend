@@ -15,10 +15,10 @@ function Contatos() {
 
     const useStyles = makeStyles({
         root: {
-            maxWidth: 900,
+            maxWidth: 600,
         },
         media: {
-            height: 500,
+            height: 300,
         },
     });
 

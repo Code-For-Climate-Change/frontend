@@ -85,7 +85,7 @@ function Perfil() {
     
 
     return (
-        <div className="teste">
+        <div className="the-box">
         <Box className='card-principal'>
             <Box className='card-container-imagem'>
                 <img className='card-imagem'
